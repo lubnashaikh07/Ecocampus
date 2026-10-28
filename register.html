@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>EcoCampus | Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="brand" href="index.html">🌿 EcoCampus</a>
+        <nav><a href="index.html">Login</a><a href="register.html">Register</a></nav>
+    </header>
+    <main class="auth-wrap single">
+        <section class="panel auth-panel"><span class="eyebrow">JOIN THE MOVEMENT</span>
+            <h2>Create your account</h2>
+            <p class="muted">Start making a measurable difference on campus.</p>
+            <form id="registerForm">
+                <label>Full name</label>
+                <input id="regName" required placeholder="Your full name">
+                <label>Email</label>
+                <input id="regEmail" type="email" required placeholder="you@college.edu">
+                <label>College / department</label>
+                <input id="regCollege" required placeholder="Your college or department">
+                <label>Password</label>
+                <input id="regPassword" type="password" minlength="6" required placeholder="At least 6 characters">
+                <button class="btn full" type="submit">Create account</button>
+                <p id="registerMessage" class="form-message"></p>
+            </form>
+            <p class="center muted">Already registered? <a href="index.html">Login</a></p>
+        </section>
+    </main>
+    <footer>EcoCampus · A greener campus starts with you.</footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

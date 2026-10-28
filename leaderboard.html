@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Leaderboard | EcoCampus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="brand" href="student-dashboard.html">🌿 EcoCampus</a>
+        <nav><a href="student-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a><a href="leaderboard.html">Leaderboard</a><a href="profile.html">Profile</a>
+            <button class="nav-logout" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+    <main class="page">
+        <div class="page-heading">
+            <div><span class="eyebrow">CAMPUS COMMUNITY</span>
+                <h1>Leaderboard</h1>
+                <p class="muted">Celebrate the people making greener choices.</p>
+            </div>
+        </div>
+        <section class="panel">
+            <div id="leaderboardTable" class="table-wrap"></div>
+        </section>
+        <p class="muted small-note">Points are stored in this browser only. This demo does not sync across devices.</p>
+    </main>
+    <footer>EcoCampus · Progress is better when shared.</footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

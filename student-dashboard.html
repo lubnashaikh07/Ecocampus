@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Student Dashboard | EcoCampus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="brand" href="student-dashboard.html">🌿 EcoCampus</a>
+        <nav><a href="student-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a><a href="leaderboard.html">Leaderboard</a><a href="profile.html">Profile</a>
+            <button class="nav-logout" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+    <main class="page">
+        <div class="page-heading">
+            <div><span class="eyebrow">STUDENT SPACE</span>
+                <h1>Hey, <span id="welcomeName">Eco Hero</span>!</h1>
+                <p class="muted">Every sustainable choice moves us forward.</p>
+            </div><a class="btn" href="challenges.html">Explore challenges ↗</a></div>
+        <section class="stat-grid">
+            <article class="stat-card"><span>🌱 Total points</span><strong id="dashPoints">0</strong><small>Your eco impact score</small></article>
+            <article class="stat-card"><span>✅ Completed</span><strong id="dashCompleted">0</strong><small>Challenges finished</small></article>
+            <article class="stat-card"><span>🏅 Badges earned</span><strong id="dashBadges">0</strong><small>Keep collecting</small></article>
+            <article class="stat-card"><span>📈 Campus rank</span><strong id="dashRank">—</strong><small>Among registered students</small></article>
+        </section>
+        <section class="content-grid">
+            <article class="panel">
+                <div class="section-head">
+                    <div>
+                        <h2>Recommended challenges</h2>
+                        <p class="muted">Quick wins for this week</p>
+                    </div><a href="challenges.html">View all</a></div>
+                <div id="dashboardChallenges" class="challenge-list"></div>
+            </article>
+            <article class="panel">
+                <h2>Your badges</h2>
+                <p class="muted">Earn them by taking action.</p>
+                <div id="dashboardBadges" class="badge-grid"></div><a class="btn btn-light full" href="profile.html">View profile</a></article>
+        </section>
+    </main>
+    <footer>EcoCampus · A greener campus starts with you.</footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

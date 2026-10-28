@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Profile | EcoCampus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="brand" href="student-dashboard.html">🌿 EcoCampus</a>
+        <nav><a href="student-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a><a href="leaderboard.html">Leaderboard</a><a href="profile.html">Profile</a>
+            <button class="nav-logout" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+    <main class="page narrow">
+        <div class="page-heading">
+            <div><span class="eyebrow">YOUR ECO JOURNEY</span>
+                <h1>My profile</h1>
+                <p class="muted">Manage your details and see your impact.</p>
+            </div>
+        </div>
+        <section class="panel">
+            <div class="profile-avatar" id="profileInitials">E</div>
+            <h2 id="profileName" class="center">Eco Hero</h2>
+            <p id="profileEmail" class="muted center"></p>
+            <form id="profileForm">
+                <label>Full name</label>
+                <input id="profileNameInput" required>
+                <label>College / department</label>
+                <input id="profileCollegeInput" required>
+                <button class="btn full" type="submit">Save profile</button>
+                <p id="profileMessage" class="form-message"></p>
+            </form>
+            <div class="profile-summary">
+                <div><span>Points</span><b id="profilePoints">0</b></div>
+                <div><span>Completed</span><b id="profileCompleted">0</b></div>
+                <div><span>Rank</span><b id="profileRank">—</b></div>
+            </div>
+            <h3>Badges earned</h3>
+            <div id="profileBadges" class="badge-grid"></div>
+            <button class="btn btn-danger full" id="deleteAccount" type="button">Delete my account</button>
+        </section>
+    </main>
+    <footer>EcoCampus · Your actions matter.</footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

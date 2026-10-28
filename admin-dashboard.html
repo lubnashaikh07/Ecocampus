@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Dashboard | EcoCampus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="brand" href="admin-dashboard.html">🌿 EcoCampus <span class="admin-tag">ADMIN</span></a>
+        <nav><a href="admin-dashboard.html">Admin dashboard</a>
+            <button class="nav-logout" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+    <main class="page">
+        <div class="page-heading">
+            <div><span class="eyebrow">CAMPUS CONTROL CENTRE</span>
+                <h1>Admin dashboard</h1>
+                <p class="muted">Manage challenges and monitor student participation.</p>
+            </div>
+        </div>
+        <section class="stat-grid">
+            <article class="stat-card"><span>👥 Students</span><strong id="adminStudents">0</strong></article>
+            <article class="stat-card"><span>🌱 Challenges</span><strong id="adminChallenges">0</strong></article>
+            <article class="stat-card"><span>✅ Completions</span><strong id="adminCompletions">0</strong></article>
+            <article class="stat-card"><span>⭐ Points awarded</span><strong id="adminPoints">0</strong></article>
+        </section>
+        <section class="content-grid admin-grid">
+            <article class="panel">
+                <h2 id="challengeFormTitle">Create a challenge</h2>
+                <form id="challengeForm">
+                    <input type="hidden" id="challengeId">
+                    <label>Challenge title</label>
+                    <input id="challengeTitle" required placeholder="e.g. Bring a reusable bottle">
+                    <label>Description</label>
+                    <textarea id="challengeDescription" required rows="3" placeholder="What should students do?"></textarea>
+                    <div class="form-row">
+                        <div>
+                            <label>Points</label>
+                            <input id="challengePoints" type="number" min="1" max="1000" value="20" required>
+                        </div>
+                        <div>
+                            <label>Category</label>
+                            <select id="challengeCategory">
+                                <option>Waste</option>
+                                <option>Energy</option>
+                                <option>Transport</option>
+                                <option>Water</option>
+                                <option>Community</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn full" type="submit">Save challenge</button>
+                    <button class="btn btn-light full hidden" id="cancelEdit" type="button">Cancel edit</button>
+                    <p id="adminMessage" class="form-message"></p>
+                </form>
+            </article>
+            <article class="panel">
+                <h2>Student leaderboard</h2>
+                <p class="muted">Ranked by earned points.</p>
+                <div id="adminLeaderboard" class="table-wrap"></div>
+            </article>
+        </section>
+        <section class="panel proof-review-panel">
+            <div class="section-head">
+                <div>
+                    <h2>📷 KPI proof review</h2>
+                    <p class="muted">Review student photo evidence. Only approved proofs count toward completed tasks and points.</p>
+                </div><span class="category">Admin verification</span></div>
+            <div id="proofReviewList" class="proof-review-list"></div>
+        </section>
+        <section class="panel">
+            <div class="section-head">
+                <h2>Manage challenges</h2><span class="muted">Edit or remove existing items</span></div>
+            <div id="adminChallengeList" class="admin-challenge-list"></div>
+        </section>
+    </main>
+    <footer>EcoCampus · Admin tools</footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Eco Challenges | EcoCampus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="brand" href="student-dashboard.html">🌿 EcoCampus</a>
+        <nav><a href="student-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a><a href="leaderboard.html">Leaderboard</a><a href="profile.html">Profile</a>
+            <button class="nav-logout" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+    <main class="page">
+        <div class="page-heading">
+            <div><span class="eyebrow">TAKE ACTION</span>
+                <h1>Eco challenges</h1>
+                <p class="muted">Complete real-world actions and earn points.</p>
+            </div>
+            <div class="search-wrap">
+                <input id="challengeSearch" placeholder="Search challenges..." aria-label="Search challenges">
+                <select id="categoryFilter" aria-label="Filter category">
+                    <option value="All">All categories</option>
+                    <option>Waste</option>
+                    <option>Energy</option>
+                    <option>Transport</option>
+                    <option>Water</option>
+                    <option>Community</option>
+                </select>
+            </div>
+        </div>
+        <div id="challengeGrid" class="challenge-grid"></div>
+        <p id="emptyChallenges" class="muted center hidden">No challenges match your search.</p>
+    </main>
+    <footer>EcoCampus · Small steps, lasting impact.</footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

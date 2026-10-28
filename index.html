@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>EcoCampus | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar"><a class="brand" href="index.html">🌿 EcoCampus</a>
+        <nav><a href="index.html">Login</a><a href="register.html">Register</a></nav>
+    </header>
+    <main class="auth-wrap">
+        <section class="hero"><span class="eyebrow">SMALL ACTIONS. REAL IMPACT.</span>
+            <h1>Make your campus<br><em>greener together.</em></h1>
+            <p>Take eco challenges, earn points, unlock badges and inspire your campus community.</p>
+            <div class="hero-stats">
+                <div><b>7</b><span>Eco challenges</span></div>
+                <div><b>5</b><span>Starter badges</span></div>
+                <div><b>100%</b><span>Student powered</span></div>
+            </div>
+        </section>
+        <section class="panel auth-panel">
+            <h2>Welcome back</h2>
+            <p class="muted">Sign in to continue your eco journey.</p>
+            <form id="loginForm">
+                <label>Email</label>
+                <input id="loginEmail" type="email" placeholder="you@college.edu" required>
+                <label>Password</label>
+                <input id="loginPassword" type="password" placeholder="Enter password" required>
+                <button class="btn full" type="submit">Login</button>
+                <p id="loginMessage" class="form-message"></p>
+            </form>
+            <div class="demo-box"><b>Demo admin</b>
+                <br>Email: admin@ecocampus.com
+                <br>Password: admin123</div>
+            <p class="center muted">New here? <a href="register.html">Create an account</a></p>
+        </section>
+    </main>
+    <footer>EcoCampus · A greener campus starts with you.</footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
